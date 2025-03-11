@@ -12,8 +12,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/battery")
-@CrossOrigin("http://localhost:3000")
-public class RecorderController {
+@CrossOrigin(value = "http://localhost:3000")
+public class BatteryController {
     @Autowired
     private BatteryService batteryService;
 

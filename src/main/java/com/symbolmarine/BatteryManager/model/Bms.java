@@ -11,125 +11,124 @@ public class Bms {
         Charge, Discharge
     }
 
-    private Byte bmsCapacity;
+    private Byte capacity;
 
-    private Float bmsPower;
+    private Float totalPower;
 
-    private Float bmsTotalVoltage;
+    private Float totalVoltage;
 
-    private Float bmsMonitorVoltage;
+    private Float monitorVoltage;
 
-    private Float bmsTotalCurrent;
+    private Float totalCurrent;
 
-    private Float bmsGeneratorACurrent;
+    private Float generatorACurrent;
 
-    private Float bmsGeneratorBCurrent;
+    private Float generatorBCurrent;
 
-    private Float bmsPowerCurrent;
+    private Float sunPowerCurrent;
 
-    private Float bmsTemperature;
+    private Float temperature;
 
     @Enumerated(EnumType.ORDINAL)
     private BatteryStatus batteryStatus;
 
     private String relayStatus;
 
-    private String bmsFlag;
+    private String flag;
 
-    public void setBmsCapacity(Byte bmsCapacity) {
-        this.bmsCapacity = bmsCapacity;
+    public Byte getCapacity() {
+        return capacity;
     }
 
-    public void setBmsPower(Float bmsPower) {
-        this.bmsPower = bmsPower;
+    public void setCapacity(Byte capacity) {
+        this.capacity = capacity;
     }
 
-    public void setBmsTotalVoltage(Float bmsTotalVoltage) {
-        this.bmsTotalVoltage = bmsTotalVoltage;
+    public Float getTotalPower() {
+        return totalPower;
     }
 
-    public void setBmsMonitorVoltage(Float bmsMonitorVoltage) {
-        this.bmsMonitorVoltage = bmsMonitorVoltage;
+    public void setTotalPower(Float totalPower) {
+        this.totalPower = totalPower;
     }
 
-    public void setBmsTotalCurrent(Float bmsTotalCurrent) {
-        this.bmsTotalCurrent = bmsTotalCurrent;
+    public Float getTotalVoltage() {
+        return totalVoltage;
     }
 
-    public void setBmsGeneratorACurrent(Float bmsGeneratorACurrent) {
-        this.bmsGeneratorACurrent = bmsGeneratorACurrent;
+    public void setTotalVoltage(Float totalVoltage) {
+        this.totalVoltage = totalVoltage;
     }
 
-    public void setBmsGeneratorBCurrent(Float bmsGeneratorBCurrent) {
-        this.bmsGeneratorBCurrent = bmsGeneratorBCurrent;
+    public Float getMonitorVoltage() {
+        return monitorVoltage;
     }
 
-    public void setBmsPowerCurrent(Float bmsPowerCurrent) {
-        this.bmsPowerCurrent = bmsPowerCurrent;
+    public void setMonitorVoltage(Float monitorVoltage) {
+        this.monitorVoltage = monitorVoltage;
     }
 
-    public void setBmsTemperature(Float bmsTemperature) {
-        this.bmsTemperature = bmsTemperature;
+    public Float getTotalCurrent() {
+        return totalCurrent;
     }
 
-    public void setBatteryStatus(BatteryStatus batteryStatus) {
-        this.batteryStatus = batteryStatus;
+    public void setTotalCurrent(Float totalCurrent) {
+        this.totalCurrent = totalCurrent;
     }
 
-    public void setRelayStatus(String relayStatus) {
-        this.relayStatus = relayStatus;
+    public Float getGeneratorACurrent() {
+        return generatorACurrent;
     }
 
-    public void setBmsFlag(String bmsFlag) {
-        this.bmsFlag = bmsFlag;
+    public void setGeneratorACurrent(Float generatorACurrent) {
+        this.generatorACurrent = generatorACurrent;
     }
 
-    public Byte getBmsCapacity() {
-        return bmsCapacity;
+    public Float getGeneratorBCurrent() {
+        return generatorBCurrent;
     }
 
-    public Float getBmsPower() {
-        return bmsPower;
+    public void setGeneratorBCurrent(Float generatorBCurrent) {
+        this.generatorBCurrent = generatorBCurrent;
     }
 
-    public Float getBmsTotalVoltage() {
-        return bmsTotalVoltage;
+    public Float getSunPowerCurrent() {
+        return sunPowerCurrent;
     }
 
-    public Float getBmsMonitorVoltage() {
-        return bmsMonitorVoltage;
+    public void setSunPowerCurrent(Float sunPowerCurrent) {
+        this.sunPowerCurrent = sunPowerCurrent;
     }
 
-    public Float getBmsTotalCurrent() {
-        return bmsTotalCurrent;
+    public Float getTemperature() {
+        return temperature;
     }
 
-    public Float getBmsGeneratorACurrent() {
-        return bmsGeneratorACurrent;
-    }
-
-    public Float getBmsGeneratorBCurrent() {
-        return bmsGeneratorBCurrent;
-    }
-
-    public Float getBmsPowerCurrent() {
-        return bmsPowerCurrent;
-    }
-
-    public Float getBmsTemperature() {
-        return bmsTemperature;
+    public void setTemperature(Float temperature) {
+        this.temperature = temperature;
     }
 
     public BatteryStatus getBatteryStatus() {
         return batteryStatus;
     }
 
+    public void setBatteryStatus(BatteryStatus batteryStatus) {
+        this.batteryStatus = batteryStatus;
+    }
+
     public String getRelayStatus() {
         return relayStatus;
     }
 
-    public String getBmsFlag() {
-        return bmsFlag;
+    public void setRelayStatus(String relayStatus) {
+        this.relayStatus = relayStatus;
     }
 
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
 }

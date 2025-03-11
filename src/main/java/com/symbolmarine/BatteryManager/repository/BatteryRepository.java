@@ -1,7 +1,15 @@
 package com.symbolmarine.BatteryManager.repository;
 
+import com.symbolmarine.BatteryManager.model.Battery;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-//@Repository
-public interface BatteryRepository extends BatteryRepositoryCustom {
+import java.util.List;
+
+@Repository
+public interface BatteryRepository extends JpaRepository<Battery, Integer> {
+
+    @Query(value = "SELECT * FROM battery ORDER BY id DESC LIMIT 50", nativeQuery = true)
+    List<Battery> findTop50ByOrderByIdDesc();
 }
