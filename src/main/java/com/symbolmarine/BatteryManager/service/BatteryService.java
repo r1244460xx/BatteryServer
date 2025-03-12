@@ -2,6 +2,7 @@ package com.symbolmarine.BatteryManager.service;
 
 import com.symbolmarine.BatteryManager.model.Battery;
 import com.symbolmarine.BatteryManager.repository.BatteryRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +14,10 @@ import java.util.ListIterator;
 public class BatteryService {
     @Autowired
     private BatteryRepository batteryRepository;
-    private static final List<Battery> batteryList = new ArrayList<>();
 
-    static {
-
-    }
-
-//    @Transactional
+    @Transactional
     public void push(Battery battery) {
-        batteryList.add(battery);
+        batteryRepository.save(battery);
     }
 
     public List<Battery> pull(Integer count) {
