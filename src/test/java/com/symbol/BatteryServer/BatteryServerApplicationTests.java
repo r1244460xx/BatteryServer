@@ -1,10 +1,10 @@
-package com.symbolmarine.BatteryManager;
+package com.symbol.BatteryServer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BatteryManagerApplicationTests {
+class BatteryServerApplicationTests {
 
 	@Test
 	void contextLoads() {

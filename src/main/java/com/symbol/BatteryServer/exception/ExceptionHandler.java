@@ -1,4 +1,4 @@
-package com.symbolmarine.BatteryManager.exception;
+package com.symbol.BatteryServer.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

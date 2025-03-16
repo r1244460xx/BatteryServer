@@ -1,13 +1,13 @@
-package com.symbolmarine.BatteryManager;
+package com.symbol.BatteryServer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BatteryManagerApplication {
+public class BatteryServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BatteryManagerApplication.class, args);
+		SpringApplication.run(BatteryServerApplication.class, args);
 	}
 
 }

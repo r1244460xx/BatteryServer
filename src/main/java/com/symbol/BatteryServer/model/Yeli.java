@@ -1,4 +1,4 @@
-package com.symbolmarine.BatteryManager.model;
+package com.symbol.BatteryServer.model;
 
 import jakarta.persistence.Embeddable;
 

@@ -1,6 +1,6 @@
-package com.symbolmarine.BatteryManager.repository;
+package com.symbol.BatteryServer.repository;
 
-import com.symbolmarine.BatteryManager.model.Battery;
+import com.symbol.BatteryServer.model.Battery;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

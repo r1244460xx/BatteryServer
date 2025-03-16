@@ -1,7 +1,7 @@
-package com.symbolmarine.BatteryManager.service;
+package com.symbol.BatteryServer.service;
 
-import com.symbolmarine.BatteryManager.model.Battery;
-import com.symbolmarine.BatteryManager.repository.BatteryRepository;
+import com.symbol.BatteryServer.model.Battery;
+import com.symbol.BatteryServer.repository.BatteryRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

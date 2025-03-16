@@ -1,7 +1,7 @@
-package com.symbolmarine.BatteryManager.controller;
+package com.symbol.BatteryServer.controller;
 
-import com.symbolmarine.BatteryManager.model.Battery;
-import com.symbolmarine.BatteryManager.service.BatteryService;
+import com.symbol.BatteryServer.model.Battery;
+import com.symbol.BatteryServer.service.BatteryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
