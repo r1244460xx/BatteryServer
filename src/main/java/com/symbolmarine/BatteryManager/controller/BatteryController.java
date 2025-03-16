@@ -11,8 +11,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/battery")
-@CrossOrigin(value = "http://localhost:3000")
+@RequestMapping("/api/battery")
 public class BatteryController {
     @Autowired
     private BatteryService batteryService;
@@ -25,6 +24,9 @@ public class BatteryController {
 
     @GetMapping
     public List<Battery> pull(@RequestParam(defaultValue = "50") Integer count) {
+        if (count < 1) {
+            throw new IllegalArgumentException("Passed count: " + count + " cannot be smaller than 0");
+        }
         return batteryService.pull(count);
     }
 

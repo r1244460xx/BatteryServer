@@ -51,5 +51,5 @@ def generate_random_data():
 
 if __name__ == "__main__":
     json = generate_random_data()
-    url = "http://localhost:8080/battery"
+    url = "http://35.229.171.190/api/battery"
     print(requests.post(url=url, json=json))
