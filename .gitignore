@@ -40,3 +40,4 @@ out/
 gradlew.bat
 mysql_password.txt
 connect_info.txt
+/logs/error.log

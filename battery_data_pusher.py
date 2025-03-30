@@ -1,6 +1,8 @@
 import json
 import random
 import datetime
+import time
+
 import requests
 
 def random_datetime(start_year=2020, end_year=2025):
@@ -50,6 +52,14 @@ def generate_random_data():
     return data
 
 if __name__ == "__main__":
-    json = generate_random_data()
-    url = "http://35.229.171.190/api/battery"
-    print(requests.post(url=url, json=json))
+    domain = input("IP or Domain\n")
+    interval = float(input("Time Interval(sec float)\n"))
+    url = f"http://{domain}/api/battery"
+    while True:
+        json = generate_random_data()
+        try:
+            print(requests.post(url=url, json=json))
+        except:
+            print("Post Failed")
+        finally:
+            time.sleep(interval)
