@@ -2,19 +2,21 @@ package com.symbol.BatteryServer.controller;
 
 import com.symbol.BatteryServer.model.Battery;
 import com.symbol.BatteryServer.service.BatteryService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/api/battery")
 public class BatteryController {
-    @Autowired
-    private BatteryService batteryService;
+
+    private final BatteryService batteryService;
+
+    public BatteryController(BatteryService batteryService) {
+        this.batteryService = batteryService;
+    }
 
     @PostMapping
     public ResponseEntity<String> push(@RequestBody Battery battery) {
