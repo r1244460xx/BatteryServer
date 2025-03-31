@@ -2,6 +2,7 @@
 <configuration>
 
     <property name="LOG_PATH" value="${LOG_PATH:-logs}"/>
+    <property name="INFO_LOG" value="${LOG_PATH}/info.log"/>
     <property name="ERROR_LOG" value="${LOG_PATH}/error.log"/>
 
     <!-- Console log -->
@@ -9,6 +10,22 @@
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
+    </appender>
+
+    <!-- Normal Logger -->
+    <appender name="InfoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${INFO_LOG}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <!-- 只記錄 ERROR 級別以上的日誌 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
     </appender>
 
     <!-- Exception/Error log to separate file -->
@@ -30,6 +47,7 @@
     <!-- Root logger -->
     <root level="INFO">
         <appender-ref ref="Console"/>
+        <appender-ref ref="InfoFile"/>
         <appender-ref ref="ErrorFile"/>
     </root>
 
