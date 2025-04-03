@@ -4,8 +4,10 @@ import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 
+import java.io.Serializable;
+
 @Embeddable
-public class Bms {
+public class Bms implements Serializable {
 
     public enum BatteryStatus {
         Charge, Discharge

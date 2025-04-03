@@ -18,10 +18,22 @@ repositories {
 }
 
 dependencies {
+	// MySQL 資料庫
 	implementation 'mysql:mysql-connector-java:8.0.33'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// Spring Boot 常用 Starter
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-artemis'
+
+	// ✅ Artemis JMS：嵌入式 broker + Spring Boot 整合
+	implementation 'org.apache.activemq:artemis-jakarta-server:2.37.0'
+	implementation 'org.apache.activemq:artemis-jakarta-client:2.37.0'
+
+	implementation 'jakarta.jms:jakarta.jms-api:3.0.0'
+
+	// 測試
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

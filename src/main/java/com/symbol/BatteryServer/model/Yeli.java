@@ -2,8 +2,10 @@ package com.symbol.BatteryServer.model;
 
 import jakarta.persistence.Embeddable;
 
+import java.io.Serializable;
+
 @Embeddable
-public class Yeli {
+public class Yeli implements Serializable {
 
     private Short leftRpm;
 

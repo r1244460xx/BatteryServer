@@ -1,5 +1,6 @@
 package com.symbol.BatteryServer.controller;
 
+import com.symbol.BatteryServer.messaging.BatteryProducer;
 import com.symbol.BatteryServer.model.Battery;
 import com.symbol.BatteryServer.service.BatteryService;
 import org.slf4j.Logger;
@@ -14,17 +15,20 @@ import java.util.List;
 @RequestMapping("/api/battery")
 public class BatteryController {
 
-    private final BatteryService batteryService;
-
     private final static Logger logger = LoggerFactory.getLogger(BatteryController.class);
 
-    public BatteryController(BatteryService batteryService) {
+    private final BatteryService batteryService;
+
+    private final BatteryProducer batteryProducer;
+
+    public BatteryController(BatteryService batteryService, BatteryProducer batteryProducer) {
         this.batteryService = batteryService;
+        this.batteryProducer = batteryProducer;
     }
 
     @PostMapping
     public ResponseEntity<String> push(@RequestBody Battery battery) {
-        batteryService.push(battery);
+        batteryProducer.sendBatteryMessage(battery);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body("{\"status\" : \"ok\"}");
     }
 

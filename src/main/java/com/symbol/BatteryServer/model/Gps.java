@@ -2,8 +2,10 @@ package com.symbol.BatteryServer.model;
 
 import jakarta.persistence.Embeddable;
 
+import java.io.Serializable;
+
 @Embeddable
-public class Gps {
+public class Gps implements Serializable {
     private Float latitude;
 
     private Float longitude;

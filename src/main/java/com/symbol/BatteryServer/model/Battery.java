@@ -2,11 +2,12 @@ package com.symbol.BatteryServer.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "battery")
-public class Battery {
+public class Battery implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
